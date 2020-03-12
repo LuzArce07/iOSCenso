@@ -14,6 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::middleware('auth:api')->get('/usuario', 'UsuarioApiController@usuario');
+
+Route::middleware('auth:api')->post('/suma', 'UsuarioApiController@suma');
+
+//Aqui te crea todas los recursos pero sin el create y el edit (solo se crean 5)
+Route::apiResource('casas', 'CasasApiController');
+
+
+//
+
