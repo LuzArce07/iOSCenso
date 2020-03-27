@@ -21,7 +21,7 @@ Route::middleware('auth:api')->post('/suma', 'UsuarioApiController@suma');
 //Aqui te crea todas los recursos pero sin el create y el edit (solo se crean 5)
 Route::apiResource('casas', 'CasasApiController');
 
-
+Route::apiResource('negocios', 'NegociosApiController');
 
 
 //
